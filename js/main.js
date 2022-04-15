@@ -2,7 +2,6 @@ document.querySelector('button').addEventListener('click', getWeather);
 const answer = document.querySelector("h2");
 let answerLoc = "";
 
-const key = "206391ffc210ae079b2264279e027ba9";
 const url = "https://api.openweathermap.org/";
 
 
@@ -19,7 +18,7 @@ function getWeather() {
       console.log(data);
 
       let minTemp = data.list.list.temp.min;
-      if (min > 0) answer.textContent = `YES, there will be ${answerLoc}`;
+      if (minTemp > 0) answer.textContent = `YES, there will be ${answerLoc}`;
       else answer.textContent = `NO, there will be no ${answerLoc}`;
 
     })

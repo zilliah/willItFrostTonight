@@ -1,5 +1,6 @@
 document.querySelector('button').addEventListener('click', getLocation);
 const answer = document.querySelector("h2");
+const tomorrow = document.querySelector("h3");
 let answerLoc = "";
 
 const url = "https://api.openweathermap.org/";
@@ -22,6 +23,11 @@ function getWeather(lat, lon) {
       let minTemp = data.daily[0].temp.min;
       if (minTemp <= 0) answer.textContent = `YES, there will be ${answerLoc}`;
       else answer.textContent = `NO, there will be no ${answerLoc}`;
+
+      let tomorrowMin = data.daily[1].temp.min;
+      if (tomorrowMin <= 0) tomorrow.textContent = "There will be frost tomorrow night.";
+      else tomorrow.textContent = "No frost tomorrow night.";
+
 
     })
     .catch(err => {

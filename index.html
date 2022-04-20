@@ -9,26 +9,34 @@
 
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Manrope:wght@300&display=swap" rel="stylesheet">
 	</head>
-	<body>
+	<body class="">
 
-		<h1>Will It Frost Tonight?</h1>
+		<div>
+			<h1>Will It Frost Tonight?</h1>
+	
+			<section class="location">
+				<legend>City: 
+					<input type="text" name="" value="" placeholder="Ottawa">
+				</legend>
+				<select name="country" id="country">
+					<option value="CA">Canada</option>
+					<option value="US">USA</option>
+				</select>
+				<button type="button" name="button">Check for Frost</button>
+			</section>
+	
+			<section class="result">
+				<h2></h2>
+				<h3></h3>
+				<button type="button" name="save" class="hide">Save Location</button>
+			</section>
 
-		<section>
-			<legend> City
-				<input type="text" name="" value="" placeholder="Ottawa">
-			</legend>
-			<select name="country" id="country">
-				<option value="CA">Canada</option>
-				<option value="US">USA</option>
-			</select>
-			<button type="button" name="button">Check for Frost</button>
-		</section>
+		</div>
 
-		<section>
-			<h2></h2>
-			<h3></h3>
-		</section>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

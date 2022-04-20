@@ -3,8 +3,18 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
+  --frost-blue: rgb(179, 236, 236);
+  --sunny: rgb(255, 217, 0);
+  --leafy: rgb(95, 207, 133);
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: var(--leafy);
+  background-image: linear-gradient(var(--frost-blue), var(--leafy));
+  height: 100vh;
 }
 
 /******************************************
@@ -16,7 +26,51 @@ img{
   max-width: 40%;
 }
 
+div {
+  background-color: rgb(244, 248, 248, 0.4);
+  width: max-content;
+  margin: 20vh auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+.location > * {
+  margin: 1rem;
+}
+
+input {
+  margin-left: 0.5rem;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+h1 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
+.sunny {
+  background-color: var(--sunny);
+  background-image: linear-gradient(var(--sunny), rgb(255, 246, 162));
+}
+
+.frost {
+  background-color: var(--frost-blue);
+  background-image: linear-gradient(white, var(--frost-blue))
+}

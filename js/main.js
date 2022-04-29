@@ -4,6 +4,7 @@ const tomorrow = document.querySelector("h3");
 const body = document.querySelector("body");
 let answerLoc = "";
 
+const key = process.env.OWM_key;
 const url = "https://api.openweathermap.org/";
 
 

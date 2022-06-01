@@ -4,7 +4,7 @@ const tomorrow = document.querySelector("h3");
 const body = document.querySelector("body");
 let answerLoc = "";
 
-const key = process.env.OWM_key;
+const key = "01befbef9043692bef53ecbdcf2ef7a0";
 const url = "https://api.openweathermap.org/";
 
 
